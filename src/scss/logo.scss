@@ -1,0 +1,76 @@
+.logo {
+  height: 41px;
+  line-height: 1;
+  position: relative;
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    background-color: $logo_main_color;
+    width: 41px;
+    height: 41px;
+    border-radius: 100%;
+    z-index: 0;
+  }
+  .logo__title {
+    font-family: $font_family2;
+    color: $font_color;
+    font-size: 17px;
+    position: relative;
+    z-index: 1;
+    margin: 14px 0 0 16px;
+  }
+  @media (min-width: 992px) {
+    height: 56px;
+    .logo__title {
+      font-size: 26px;
+      margin: 16px 0 0 17px;
+    }
+    &::before {
+      width: 56px;
+      height: 56px;
+    }
+  }
+}
+
+.logo_main,
+.logo_login {
+  margin: 0 auto;
+  @media (min-width: 992px) {
+    height: 68px;
+    .logo__title {
+      font-size: 30px;
+      margin: 23px 0 0 29px;
+    }
+    margin: 0;
+    &::before {
+      width: 68px;
+      height: 68px;
+    }
+  }
+}
+
+.logo_footer {
+  height: 36px;
+  margin-bottom: 43px;
+  &::before {
+    width: 36px;
+    height: 36px;
+  }
+  .logo__title {
+    font-size: 15px;
+    margin: 13px 0 0 13px;
+  }
+  @media (min-width: 992px) {
+    height: 48px;
+    margin: 0;
+    .logo__title {
+      font-size: 20px;
+      margin: 16px 0 0 19px;
+    }
+    &::before {
+      width: 48px;
+      height: 48px;
+    }
+  }
+}

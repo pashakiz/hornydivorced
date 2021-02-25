@@ -1,0 +1,62 @@
+.settings-form {
+  padding-top: 8px;
+  @media (min-width: 992px) {
+    padding-top: 70px;
+  }
+  @media (min-width: 1200px) {
+    padding-top: 0;
+    max-width: 442px;
+    margin-left: 40px;
+  }
+  @media (min-width: 1500px) {
+    margin-left: 70px;
+  }
+}
+
+.settings-photo {
+  margin: 0 -15px;
+  top: -30px;
+  position: relative;
+  @media (min-width: 400px) {
+    width: 320px;
+    max-width: 320px;
+    margin: 0 auto;
+    top: 0;
+  }
+  @media (min-width: 768px) {
+    width: 540px;
+    max-width: 540px;
+  }
+  @media (min-width: 1200px) {
+    width: 540px;
+    max-width: 540px;
+    margin: 0 0 0 auto;
+  }
+  @media (min-width: 1500px) {
+    margin: 0 20px 0 auto;
+  }
+}
+
+.profile-photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0;
+  width: 100%;
+  max-width: 100%;
+  height: 533px;
+  max-height: 533px;
+  overflow: hidden;
+  background-color: $bg_dark_1;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  @media (min-width: 768px) {
+    height: 700px;
+    max-height: 700px;
+  }
+  @media (min-width: 1200px) {
+    height: 700px;
+    max-height: 700px;
+  }
+}
