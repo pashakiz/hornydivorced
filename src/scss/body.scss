@@ -3,10 +3,14 @@ body {
   font-weight: $font_weight;
   font-size: $font_size_mobile;
   color: $font_color;
-  background-color: $body_bg_color;
   line-height: 1.5;
+  background: $body_bg_color;
   @media (min-width: 768px) {
     font-size: $font_size;
+  }
+  @media (min-width: 1200px) {
+    background: url('../img/bg/body-bg.svg') 50% 0 no-repeat $body_bg_color;
+    background-size: 100%;
   }
 }
 
