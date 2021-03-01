@@ -176,25 +176,30 @@ textarea.form-control {
   }
 }
 .form-group_swicher {
-  padding: 0 15px 27px;
-  border-bottom: 1px solid $input_border_color;
-  margin-bottom: 40px;
+  padding: 37px 15px 0;
+  border-top: 1px solid $bg_dark_2;
+  margin-bottom: 30px;
+  margin-left: -15px;
+  margin-right: -15px;
   @media (min-width: 576px) {
     border: none;
     padding: 0;
   }
   @media (min-width: 768px) {
-    margin-bottom: 45px;
+    margin-bottom: 75px;
+  }
+  &:first-child {
+    border: none;
+    padding: 0 15px 0;
+    @media (min-width: 576px) {
+      padding: 0;
+    }
   }
 }
 .form-group_btn-unsuscr {
-  padding: 0 15px;
-  margin-top: 31px;
-  @media (min-width: 576px) {
-    padding: 0;
-  }
+  margin-top: 71px;
   @media (min-width: 768px) {
-    margin-top: 70px;
+    margin-top: 170px;
   }
 }
 
@@ -432,7 +437,8 @@ textarea.form-control {
 
 .custom-switch {
   &.custom-control {
-    padding: 0 0 0 $switch_bg_width_mob+$switch_margin_right_mob;
+    padding: $switch_bg_height_mob+$switch_margin_top_mob 0 0 0;
+    //padding: 0 0 0 $switch_bg_width_mob+$switch_margin_right_mob;
     cursor: pointer;
     position: relative;
     @media (min-width: 768px) {
@@ -442,11 +448,16 @@ textarea.form-control {
     }
   }
   .custom-control-label {
+    font-family: $switch_label_fontfamily;
+    font-size: $switch_label_fontsize_mob;
+    line-height: $switch_label_lineheight_mob;
     position: relative;
     &::before {
       content: $switch_txt;
-      left: - $switch_bg_width_mob - $switch_margin_right_mob;
-      top: calc(0.25rem + 3px);
+      left: 0;
+      //left: - $switch_bg_width_mob - $switch_margin_right_mob;
+      top: - $switch_bg_height_mob - $switch_margin_top_mob;
+      //top: calc(0.25rem + 3px);
       width: $switch_bg_width_mob;
       height: $switch_bg_height_mob;
       border: $switch_border;
@@ -454,24 +465,27 @@ textarea.form-control {
       background-color: $switch_bg_color;
     }
     &::after {
-      top: calc(0.25rem + 10px);
-      left: - $switch_bg_width_mob - $switch_margin_right_mob + 7px;
+      top: - $switch_bg_height_mob - $switch_margin_top_mob + 4px;
+      //top: calc(0.25rem + 10px);
+      left: 5px;
+      //left: - $switch_bg_width_mob - $switch_margin_right_mob + 7px;
       width: $switch_dot_size_w_mob;
       height: $switch_dot_size_h_mob;
       border-radius: $switch_dot_border_radius;
       background-color: $switch_dot_color;
     }
     @media (min-width: 768px) {
+      font-size: $switch_label_fontsize;
+      line-height: $switch_label_lineheight;
       &::before {
-        padding-top: 13px;
         top: calc(0.25rem + 3px);
         left: - $switch_bg_width - $switch_margin_right;
         width: $switch_bg_width;
         height: $switch_bg_height;
       }
       &::after {
-        top: calc(0.25rem + 13px);
-        left: - $switch_bg_width - $switch_margin_right + 11px;
+        top: calc(0.25rem + 10px);
+        left: - $switch_bg_width - $switch_margin_right + 7px;
         width: $switch_dot_size_w;
         height: $switch_dot_size_h;
       }
@@ -484,14 +498,30 @@ textarea.form-control {
           border-color: $switch_dot_color_active;
           background-color: $switch_bg_color_checked;
           color: $switch_txt_color_checked;
-          border-radius: 0;
         }
         &::after {
-          background-color: $switch_dot_color_active;
-          transform: translateX(44px);
+          /*----heart----*/
+          width: 30px;
+          height: 26px;
+          top: - 26px - $switch_margin_top_mob + 5px;
+          left: 3px;
           border-radius: 0;
+          background-image: url('../img/icons/heart.svg');
+          background-size: 95%;
+          background-color: transparent;
+          transition: background-color 0s ease-in-out, width 0.15s ease-in-out, height 0.15s ease-in-out, top 0.15s ease-in-out;
+          /*----heart----*/
+          //background-color: $switch_dot_color_active;
+          transform: translateX(18px);
           @media (min-width: 768px) {
-            transform: translateX(65px);
+            /*----heart----*/
+            width: 35px;
+            height: 31px;
+            top: calc(0.25rem + 1px);
+            left: - $switch_bg_width - $switch_margin_right + 4px;
+            background-size: 100%;
+            /*----heart----*/
+            transform: translateX(28px);
           }
         }
       }
@@ -514,7 +544,7 @@ textarea.form-control {
       ~ .custom-control-label {
         &::before {
           background-color: $switch_bg_color_active;
-          border-color: $switch_dot_color;
+          border-color: $btn_bg_color;
         }
       }
     }
@@ -609,34 +639,20 @@ textarea.form-control {
 
 .btn {
   width: 100%;
-  height: 64px;
-  padding: 24px 35px 23px;
-  border-radius: 100%;
-  border: 1px solid #000;
-  font-family: $font_family2;
-  font-size: 16px;
-  font-weight: 400;
+  height: 52px;
+  padding: 16px 30px 17px;
+  border-radius: 100px;
+  background: $btn_bg_color;
+  font-family: $font_family;
+  font-size: 15px;
+  font-weight: 600;
   color: $font_color3;
-  line-height: 18px;
+  line-height: 1;
   position: relative;
   text-transform: uppercase;
-  &::after {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 100%;
-    top: 7px;
-    left: 11px;
-    background-color: $btn_bg_color;
-    z-index: -10;
-  }
   &:hover {
-    &::after {
-      color: $font_color3;
-      background-color: $btn_hover_bg_color;
-    }
+    color: $font_color3;
+    background-color: $btn_hover_bg_color;
   }
   &:focus {
     outline: none;
@@ -644,16 +660,39 @@ textarea.form-control {
   }
   @media (min-width: 992px) {
     width: auto;
+    max-width: 440px;
     height: 70px;
-    font-size: 17px;
-    line-height: 19px;
-    padding: 26px 60px;
-    &::after {
-      top: 6px;
-      left: 11px;
-    }
+    font-size: 20px;
+    padding: 23px 50px 22px;
   }
   &.btn_1 { //index
+    background: transparent;
+    line-height: 20px;
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 100%;
+      top: 7px;
+      left: 11px;
+      background-color: $btn_bg_color;
+      z-index: -10;
+    }
+    &:hover {
+      &::after {
+        color: $font_color3;
+        background-color: $btn_hover_bg_color;
+      }
+    }
+    @media (min-width: 992px) {
+      line-height: 34px;
+      &::after {
+        top: 6px;
+        left: 11px;
+      }
+    }
     @media (min-width: 1200px) {
       height: 64px;
       padding: 24px 35px 23px;
