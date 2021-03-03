@@ -728,26 +728,18 @@ textarea.form-control {
     }
   }
   &.btn_2 { //user list
-    width: 134px;
-    height: 31px;
-    font-size: 8px;
-    line-height: 9px;
-    padding: 10px 20px;
+    width: 106px;
+    height: 32px;
+    font-size: 10px;
+    line-height: 1;
+    padding: 10px 10px 9px;
     text-align: center;
-    &::after {
-      top: 3px;
-      left: 5px;
-    }
+    border-radius: 100px 0 0 100px;
     @media (min-width: $user_list_item_breakpoint) {
-      width: 282px;
-      height: 76px;
-      font-size: 17px;
-      line-height: 19px;
-      padding: 26px 35px 24px;
-      &::after {
-        top: 6px;
-        left: 11px;
-      }
+      width: 174px;
+      height: 66px;
+      font-size: 20px;
+      padding: 21px 20px 20px;
     }
   }
   &.btn_3 { //change photo

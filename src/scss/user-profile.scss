@@ -214,7 +214,6 @@
     border-radius: 100%;
     width: 12px;
     height: 12px;
-    margin: 0 33px;
   }
 }
 .userprofile__loc {
@@ -305,30 +304,42 @@
   }
   .compatibility__chart {
     +.compatibility__chart {
-      margin-left: 25px;
+      margin-left: 12px;
       @media (min-width: $user_list_item_breakpoint) {
-        margin-left: 60px;
+        margin-left: 25px;
       }
     }
   }
   .compatibility__progress {
-    width: 65px;
-    height: 15px;
+    width: 31px;
+    height: 8px;
+    &.compatibility__progress_svgup {
+      svg {
+        position: relative;
+        top: -8px;
+      }
+    }
     @media (min-width: $user_list_item_breakpoint) {
-      width: 92px;
-      height: 21px;
+      width: 67px;
+      height: 16px;
+      &.compatibility__progress_svgup {
+        svg {
+          position: relative;
+          top: -8px;
+        }
+      }
     }
   }
   .compatibility__title {
     font-family: $font_family;
     color: $font_color3;
     font-weight: 400;
-    font-size: 15px;
-    margin-top: 17px;
+    font-size: 8px;
+    margin-top: 4px;
     @media (min-width: $user_list_item_breakpoint) {
       color: $font_color3;
       font-size: 19px;
-      margin-top: 20px;
+      margin-top: 12px;
     }
   }
 

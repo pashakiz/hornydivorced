@@ -70,8 +70,7 @@ $(function() {
         });
 
         //sliders fot user_list page
-        owlInit('.user-list-slider');
-        owlInit('.user-list-extra');
+        //owlInit('.user-list-extra');
 
     });
 
@@ -103,8 +102,7 @@ $(function() {
     }
 
     $(window).resize(function() {
-        owlInit('.user-list-slider');
-        owlInit('.user-list-extra');
+        //owlInit('.user-list-extra');
     });
 
 });
