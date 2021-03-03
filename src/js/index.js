@@ -36,13 +36,18 @@ $(function() {
             $('.profile-photo').css('background-image', 'url(' + imageUrl + ')');
         });
 
+        //gallery on desktop
+        $('.user-profile-gallery').on('click', '.user-profile-gallery__item', function(){
+            let url = $(this).css('background-image');
+            url = url.replace('url(','').replace('-heart','').replace(')','').replace(/\"/gi, '');
+            $('.user-profile-photo').css('background-image', 'url(' + url + ')');
+        });
+
         //slider (Profile gallery) for mobile
         $('.owl-carousel.user-profile-slider').owlCarousel({
             items: 1,
-            dots:true
+            dots: false
         });
-
-        owlDotsBeauty('.user-profile-slider');
 
         //slider for SignUp/Login pages
         $('.owl-carousel.user-list-slider-login').owlCarousel({
@@ -69,18 +74,6 @@ $(function() {
         owlInit('.user-list-extra');
 
     });
-
-    //count all items and change margins if many
-    function owlDotsBeauty(el_class) {
-        let userProfileSliderItems = document.querySelectorAll(el_class + ' .owl-dot').length;
-        console.log('userProfileSliderItems', userProfileSliderItems);
-        if (userProfileSliderItems > 9 && userProfileSliderItems < 16) {
-            document.querySelector(el_class).classList.add('user-profile-slider_many-items1');
-        }
-        if (userProfileSliderItems > 15) {
-            document.querySelector(el_class).classList.add('user-profile-slider_many-items2');
-        }
-    }
 
     //init owl carousel for custom screen width
     function owlInit(el_class) {
