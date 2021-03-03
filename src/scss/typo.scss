@@ -50,28 +50,23 @@ h1 {
   }
   &.h1_login {
     text-align: center;
-    color: $body_bg_color;
-    margin-bottom: 25px;
-    font-size: 25px;
-    line-height: 37px;
-    text-transform: uppercase;
+    color: $input_txt_color;
+    font-size: 40px;
+    line-height: 50px;
+    margin: 0 0 32px;
     @media (min-width: 1200px) {
-      text-transform: none;
-      text-align: left;
-      color: $font_color;
-      font-size: 39px;
-      line-height: 57px;
-      margin-bottom: 37px;
+      color: $font_color3;
+      margin: 0 0 32px;
     }
     @media (min-width: 1500px) {
-      font-size: 43px;
-      line-height: 63px;
-      margin-bottom: 41px;
+      font-size: 48px;
+      line-height: 60px;
+      margin: 0 0 42px;
     }
     @media (min-width: 1920px) {
-      font-size: 55px;
-      line-height: 80px;
-      margin-bottom: 53px;
+      font-size: 70px;
+      line-height: 95px;
+      margin: 0 0 50px;
     }
   }
 }
@@ -114,32 +109,19 @@ h2 {
     }
   }
   &.h2_login {
-    margin-top: 63px;
-    margin-bottom: 40px;
-    text-transform: uppercase;
+    margin: 0 auto;
+    text-align: center;
+    color: $font_color2;
     @media (min-width: 992px) {
-      margin-top: 100px;
-      margin-bottom: 70px;
+      margin: 0 auto;
     }
     @media (min-width: 1200px) {
-      text-align: center;
+      color: $font_color;
+      text-align: left;
       text-transform: none;
-      font-size: 30px;
-      line-height: 60px;
-      margin-top: 80px;
-      margin-bottom: 30px;
-    }
-    @media (min-width: 1500px) {
-      font-size: 47px;
-      line-height: 60px;
-      margin-top: 120px;
-      margin-bottom: 70px;
-    }
-    @media (min-width: 1920px) {
-      font-size: 65px;
-      line-height: 111px;
-      margin-top: 140px;
-      margin-bottom: 100px;
+      font-size: 80px;
+      line-height: 120px;
+      margin: 0;
     }
   }
 }
@@ -191,16 +173,16 @@ a {
 .link1 {
   font-family: $link_txt_family;
   font-weight: 400;
-  font-size: 15px;
-  color: $body_bg_color;
+  font-size: 12px;
+  color: $link_hover_color2;
   text-transform: uppercase;
   &:hover {
-    color: $link_hover_color2;
+    color: $btn_bg_color;
     text-decoration: none;
   }
   @media (min-width: 1200px) {
     font-size: 18px;
-    color: $link_color;
+    color: #957B70;
     &:hover {
       color: $link_hover_color;
     }

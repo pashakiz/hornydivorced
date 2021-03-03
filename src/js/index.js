@@ -50,36 +50,36 @@ $(function() {
         });
 
         //slider for SignUp/Login pages
-        $('.owl-carousel.user-list-slider-login').owlCarousel({
-            loop: true,
-            dots: false,
-            items: 2,
-            margin: 30,
-            autoWidth: true,
-            responsive:{
-                768:{
-                    margin: 30
-                },
-                992:{
-                    margin: 60
-                },
-                1200:{
-                    margin: 0
-                }
-            }
-        });
+        // $('.owl-carousel.user-list-slider-login').owlCarousel({
+        //     loop: true,
+        //     dots: false,
+        //     items: 2,
+        //     margin: 30,
+        //     autoWidth: true,
+        //     responsive:{
+        //         768:{
+        //             margin: 30
+        //         },
+        //         992:{
+        //             margin: 60
+        //         },
+        //         1200:{
+        //             margin: 0
+        //         }
+        //     }
+        // });
 
-        //sliders fot user_list page
-        //owlInit('.user-list-extra');
+        //custom sliders
+        owlInit('.user-list-slider-login');
 
     });
 
     //init owl carousel for custom screen width
     function owlInit(el_class) {
-        if (window.innerWidth > 768) {
+        if (window.innerWidth > 1200) {
             $(el_class).addClass('owl-carousel');
             $('.owl-carousel' + el_class).owlCarousel({
-                loop: true,
+                loop: false,
                 items: 2,
                 margin: 0,
                 autoWidth: true,
@@ -91,7 +91,10 @@ $(function() {
                         margin: 60
                     },
                     1200:{
-                        margin: 0
+                        margin: 50
+                    },
+                    1500:{
+                        margin: 96
                     },
                 }
             });
@@ -102,7 +105,7 @@ $(function() {
     }
 
     $(window).resize(function() {
-        //owlInit('.user-list-extra');
+        owlInit('.user-list-slider-login');
     });
 
 });

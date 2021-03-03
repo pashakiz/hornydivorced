@@ -21,6 +21,8 @@
     width: 312px;
     height: 28px;
     margin: 0 auto;
+  }
+  @media (min-width: 1200px) {
     background-image: url('../img/icons/logo-header-d-index.svg');
   }
 }

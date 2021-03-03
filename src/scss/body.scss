@@ -12,6 +12,11 @@ body {
     background: url('../img/bg/body-bg.svg') 50% 0 no-repeat $body_bg_color;
     background-size: 100%;
   }
+  &.body_bg {
+    @media (min-width: 1200px) {
+      background: $body_bg_color;
+    }
+  }
 }
 
 .container {
