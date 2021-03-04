@@ -93,7 +93,7 @@ $radio_xs_space_text:        18px;
 $radio_xs_left:              -$radio_xs_width - $radio_xs_space_text;
 $radio_xs_top:               -5px;
 $radio_xs_padding_left:      $radio_xs_width + $radio_xs_space_text;
-/**/$radio_xs_marker_top:        11px - 5px;
+$radio_xs_marker_top:        11px - 5px;
 $radio_xs_marker_left:       $radio_xs_left + 11px;
 
 $radio_width:                32px;
