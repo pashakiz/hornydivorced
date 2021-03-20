@@ -61,6 +61,7 @@
       background-position: 50% 0;
       background-size: 100%;
       position: relative;
+      @include after_svg_mask('../img/photos/mask-unheart-small.svg', 100%, calc(100% + 2px), calc(100% + 2px), -1px,0,0,-1px);
     }
   }
   .user-list-item__inf {
@@ -127,6 +128,7 @@
     position: absolute;
     bottom: 0;
     right: 0;
+    z-index: 2;
   }
 }
 .user-list-item_h2 {
@@ -202,6 +204,7 @@
       background-repeat: no-repeat;
       background-position: 50%;
       background-size: 100%;
+      @include after_svg_mask('../img/photos/mask-heart.svg', 100%, calc(100% + 2px), calc(100% + 2px), -1px,0,0,-1px);
       @media (min-width: $user_list_item_breakpoint) {
         height: 213px;
       }
@@ -231,6 +234,7 @@
     padding-bottom: 17px;
     position: relative;
     top: -26px;
+    z-index: 2;
     @media (min-width: $user_list_item_breakpoint) {
       padding-bottom: 32px;
       border-radius: 33px;

@@ -37,6 +37,8 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    position: relative;
+    @include after_svg_mask('../img/photos/mask-heart-ratio.svg', cover, 100%, 100%, 0,0,0,0);
     @media (min-width: 400px) {
       height: 280px;
       max-height: 280px;
@@ -138,11 +140,12 @@
     width: 470px;
     max-width: 470px;
     height: 100%;
-    background-image: url('../img/photos/user-00.png');
+    background-image: url('../img/photos/user-00.jpg');
     background-repeat: no-repeat;
     background-position: 100% 0;
     background-size: 100%;
     position: relative;
+    @include after_svg_mask('../img/photos/mask-unheart-big.svg', 100%, calc(100% + 2px), calc(100% + 2px), -1px,0,0,-1px);
   }
   @media (min-width: 1500px) {
     width: 516px;
@@ -161,6 +164,7 @@
     position: absolute;
     bottom: 0;
     right: 0;
+    z-index: 2;
   }
   @media (min-width: 1500px) {
     width: 453px;
@@ -254,6 +258,10 @@
   }
   .userprofile__img {
     background: none;
+    &::after {
+      content: none;
+      display: none;
+    }
   }
   .userprofile__info {
     color: $font_color;
@@ -292,6 +300,8 @@
     background-position: 50%;
     background-size: 100%;
     margin-bottom: 60px;
+    position: relative;
+    @include after_svg_mask('../img/photos/mask-heart.svg', 100%, calc(100% + 2px), calc(100% + 2px), -1px,0,0,-1px);
   }
 }
 

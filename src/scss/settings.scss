@@ -64,6 +64,7 @@
   background-size: 100%;
   position: relative;
   left: -8.75%;
+  @include after_svg_mask('../img/photos/mask-heart.svg', 100%, calc(100% + 2px), calc(100% + 2px), -1px,0,0,-1px);
   @media (min-width: 400px) {
     left: 0;
     position: static;
